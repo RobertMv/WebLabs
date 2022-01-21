@@ -82,12 +82,24 @@ var main = function (toDoObjects) {
                     });
                 }
                 else if ($element.parent().is(":nth-child(4)")) {
-                    var $input = $("<input>"), $button = $("<button>").text("+");
+                    var $input = $("<input>").add4lass("description"),
+                        $inputLabel = $("<p>").text("Новая задача: "),
+                        $tagInput = $("<input>").add4lass("tags"),
+                        $tagLabel = $("<p>").text("Тэги: "),
+                        $button = $("<span>").text("+");
+
                     $button.on("click", function () {
-                        toDos.push($input.val());
+                        var description = $input.val(),
+                            // разделение в соответствии с запятыми
+                            tags = $tagInput.val().split(",");
+                        toDoObjects.push({"description":description, "tags":tags});
+                        // обновление toDos
+                        toDos = toDoObjects.map(function (toDo) {
+                            return toDo.description;
+                        });
                         $input.val("");
+                        $tagInput.val("");
                     });
-                    var $content = $("<div>").append($input).append($button);
                 }
                 return false;
             })
