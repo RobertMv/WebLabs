@@ -1,5 +1,12 @@
 body {
     background: #f9e933;
+    font-family: 'Droid Sans', serif;
+    font-size: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: Ubuntu, serif;
+    font-size: 120%;
 }
 
 header, main, footer {
@@ -45,12 +52,12 @@ footer {
     overflow: auto;
 }
 
-footer div .contact {
+footer .contact {
     float: left;
     width: 570px;
 }
 
-footer div .sitemap {
+footer .sitemap {
     float: right;
     width: 285px;
 }
