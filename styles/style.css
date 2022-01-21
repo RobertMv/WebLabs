@@ -47,29 +47,21 @@ header nav {
 
 main {
     background: white;
-    overflow: auto;
     padding: 20px;
 }
 
-main div {
-    float: left;
-    width: 570px;
+main .tabs a span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
 }
 
-main img {
-    float: right;
-    width: 285px;
-}
-
-main .faq h1 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-main h2 {
-    font-size: 120%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.tabs a span.active {
+    background: #eee;
 }
 
 footer {
