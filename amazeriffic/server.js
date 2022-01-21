@@ -8,8 +8,8 @@ var express = require("express"),
 app.use(express.static(__dirname + "/client"));
 http.createServer(app).listen(1810);
 // Этот маршрут замещает наш файл
-// todos.OLD.json в примере из части 5
-app.get("/todos.OLD.json", function (req, res) {
+// todos.json в примере из части 5
+app.get("/todos.json", function (req, res) {
     res.json(toDos);
 });
 // командуем Express принять поступающие
