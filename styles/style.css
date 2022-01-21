@@ -64,6 +64,10 @@ main .tabs a span {
     background: #eee;
 }
 
+main .tabs {
+    margin-bottom: 10px;
+}
+
 footer {
     overflow: auto;
     padding: 10px;
