@@ -28,7 +28,7 @@ var express = require("express"),
         }
     ]
 app.use(express.static(__dirname + "/client"));
-http.createServer(app).listen(1810);
+http.createServer(app).listen(3000);
 // Этот маршрут замещает наш файл
 // todos.json в примере из части 5
 app.get("/todos.json", function (req, res) {
